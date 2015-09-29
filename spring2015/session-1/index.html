@@ -347,15 +347,19 @@
 </head><body>
 <div>Web Mapping <em>Quick Start</em></div>
 <div>Hi! I'm Lyzi. You can reach me at <a href='https://twitter.comlyzidiamond'>@lyzidiamond</a> or <strong>ldiamond@ccsfgis.org</strong>.</div>
-<div>I used to do <strong>GIS</strong>. Then I was a fellow at <a href='https://codeforamerica.org'>Code for America</a>. Now I work at <a href='https://mapbox.com/'>Mapbox</a>!</div>
-<div><em>Who</em> are you? <em>Why</em> are you here?</div>
-<div><em>This course</em> is about what <strong>you</strong> want to learn.</div>
-<div>But the <em>goals</em> and <em>objectives</em> of this course remain the <strong>same</strong> regardless. By the end you should:</div>
-<div>Be able to <em>think critically</em> about web maps</div>
-<div><strong>Understand</strong> how web maps are <em>built</em></div>
-<div>Have a <strong>semi-thorough vocabulary</strong></div>
-<div>Feel <em>confident</em> and <em>stoked</em> about what you've accomplished!</div>
-<div data-bodyclass='puppy'></div>
+<div>I used to be a <strong>GIS analyst</strong>. Then I was a fellow at <a href='https://codeforamerica.org'>Code for America</a>. Now I work at <a href='https://mapbox.com/'>Mapbox</a>!</div>
+<div><em>Three</em> questions for you:<ul><li><strong>Who</strong> are you?</li><li><em>Why</em> did you sign up?</li><li><em>What</em> are you <strong>excited</strong> about learning?</li></ul></div>
+<div>I want to <strong>orient</strong> this course to your interests.</div>
+<div>If you <em>ever</em> have questions, <strong>please</strong> interrupt and ask.</div>
+<div>If you see something cool online and want to learn how it works, let me know and we can do that.</div>
+<div>Regardless, by the end of this class you should:</div>
+<div>1. Be able to <em>think critically</em> about web maps</div>
+<div>2. <strong>Understand</strong> how web maps are <em>built</em></div>
+<div>3. Have a <strong>semi-thorough vocabulary</strong></div>
+<div>4. Feel <em>confident</em> and <em>stoked</em> about what you've accomplished!</div>
+<div data-bodyclass='puppy'>Also: lots of cute animal gifs.</div>
+<div><strong>Today</strong> we are going to talk about the <em>basics of web maps</em>: their <strong>history</strong>, how they <em>work</em>, and some <strong>basic vocabulary</strong>.</div>
+<div>Let's get started!</div>
 <div>So <strong>what is a web map</strong>?</div>
 <div>Most literally: <em>a map on the web</em>.</div>
 <div>We can make maps <strong>anywhere</strong> and put them on the <em>web</em>...</div>
@@ -366,13 +370,107 @@
 <div>Maps are made of <strong>styled geographic data</strong>.</div>
 <div>There are <em>many</em> <strong>geographic data formats</strong>.</div>
 <div>They typically link <em>shapes and locations</em> with <em>attributes</em>, and sometimes encode <strong>styling</strong>.</div>
-<div>Now, <strong>what data formats</strong> might you encounter when making a <em>web map</em>?</div>
+<div>So a <em>map</em> is made up of <strong>styled spatial data</strong>.</div>
+<div>But <em>how</em> do we get it on the web?</div>
+<div>When we think of a <em>web map</em>, we think of something <strong>interactive</strong>.</div>
+<div>We can <em>pan</em> and <em>zoom</em> and <em>click</em> on things to get more information about them.</div>
+<div>Let's talk about <strong>how these maps are made</strong> so when we <em>make them ourselves</em> we know what we're doing!</div>
+<div>Let's go <strong>back in time</strong>.</div>
+<div data-bodyclass='mapquest'><br><br><br><em>In 1996, Mapquest launched its web service.</em></div>
+<div>Directions for driving! <em>Online!</em> <strong>Wow!</strong></div>
+<div>The problem: it was <strong>slow</strong> to load :(.</div>
+<div>Mapquest required a <em>full page refresh</em> to scroll or zoom and was always <strong>aligned to map image boundaries</strong>.</div>
+<div>Then, in 2005, came <em>Google Maps</em>. This revolutionized <strong>everything</strong>.</div>
+<div data-bodyclass='old-google'></div>
+<div><em>But what was the revolution?</em><br>Was it the <strong>interface</strong>?<br>The <strong>red marker</strong>?<br>The <strong>weather widget</strong>?</div>
+<div>No!</div>
+<div>It was the <em>tile. <img src="./images/toner.jpg"></em></div>
+<div>In particular, the <strong>raster</strong> tile.</div>
+<div><em>Raster tiles</em> are 256px x 256px <strong>PNG</strong> files that are <em>stored</em> on the server and <em>served</em> to the browser on request.</div>
+<div><strong>Each tile</strong> is <em>one piece</em> of the map in a <strong>grid</strong> of pieces.</div>
+<div>You may think of this as a <em>basemap</em>.</div>
+<div data-bodyclass="slippy-map">(This kind of map is colloquially called a <strong>slippy map</strong>.)</div>
+<div data-bodyclass='tile-loading'><strong>Only</strong> the tiles in the <em>current map view</em> are requested and loaded. This makes modern web maps <strong>super hella fast</strong>.</div>
+<div>Raster tiles are available at <em>preset zoom levels</em> with a <strong>different</strong> set of tiles at each zoom.</div>
+<div data-bodyclass='zoom0'><em>Zoom level 0: one tile for the world.</em></div>
+<div><strong>Number of tiles</strong> = <em>2^z</em> x <em>2^z</em>.</div>
+<div data-bodyclass='zoom1'><em>Zoom level 1: 4 tiles for the world.</em></div>
+<div data-bodyclass='zoom2345'><br><br><br><em>Zoom level 2, 3, 4, 5</em></div>
+<div>These <strong>tiles</strong> are made with a <em>super hella awesome cool open source</em> tool called <a href='http://mapnik.org'>Mapnik</a>.</div>
+<div><em>Mapnik</em> is what makes <strong>all of this possible</strong>.</div>
+<div>What does <em>Mapnik</em> do?</div>
+<div>Let's look at how <em>raster tiles</em> are made.</div>
+<div>1. Use <strong>vector data</strong> (shapefile, GeoJSON, etc)</div>
+<div>2. <strong>Style</strong> the data with a styling language called <em>CartoCSS</em></div>
+<div>3. <strong>Export</strong> data and stylesheet to a <em>renderer</em> (Mapnik) that creates tiled images.</div>
+<div>The images are <em>created</em> at each zoom level and stored in a <strong>specific file structure</strong> as PNGs.</div>
+<div>That makes <em>sense, right</em>?</div>
+<div><strong>Vector data</strong> + <em>style</em> = image with style applied to data.</div>
+<div>(If you are familiar with <em>TileMill</em>, this is what that application did.)</div>
+<div>Then, using a <strong>web mapping library</strong> like <a href='https://leafletjs.com'>Leaflet</a>, you create a <em>map container</em> that knows when to load which tiles from your <strong>tile server</strong>.</div>
+<div>When your map needs the image tile for a <strong>particular area</strong> at a <strong>particular zoom</strong>, your map container (via the browser) <em>requests</em> it from the server.</div>
+<div>Hooray! A map!</div>
+<div>This was <strong>innovative</strong> in 2005...</div>
+<div>... but it's also <em>limiting</em>, <strong>especially</strong> with the introduction of <em>retina displays</em>.</div>
+<div>With <strong>retina displays</strong> came the need for <em>larger</em>, <em>denser</em> map tiles...</div>
+<div>... all while keeping support for <strong>non-retina</strong> screens.</div>
+<div>That meant storing <em>twice</em> as many map tiles, which was a <strong>huge bummer</strong>!</div>
+<div>And thus was born the <em>vector tile</em>.</div>
+<div><strong>Before I continue</strong>, are there <em>any questions</em>?</div>
+<div>More <em>recently</em>, we've graduated to <a href='https://www.mapbox.com/developers/vector-tiles/'>vector tiles</a>.</div>
+<div>Vector tiles are <strong>similar</strong> to raster tiles...</div>
+<div>... but <em>instead</em> of creating <strong>tiled images</strong>, we create <em>tiled vector data</em> that can be <strong>rendered</strong> in the browser.</div>
+<div>All of this still happens with <em>Mapnik</em>. All hail <em>Mapnik</em>.</div>
+<div>Roads, <strong>parks</strong>, <em>water bodies</em>, bike paths, <strong>points of interest</strong>, <em>state boundaries</em>...</div>
+<div>... all of this is <strong>vector data</strong> with <em>attributes</em> attached to it.</div>
+<div data-bodyclass='geojson'></div>
+<div>Vector tiles <em>store</em> all of this information, <strong>attributes</strong> included, as <em>protocol buffers</em>, or <em>PBF</em> files.</div>
+<div><strong>Protocol buffers</strong> are <em>super lightweight</em> and <em>compact</em>.</div>
+<div>To be <strong>quite honest</strong>, this <em>doesn't</em> change things on the <strong>client-side</strong> all that much.</div>
+<div>Your maps are <em>still</em> made up of raster tiles.</div>
+<div>BUT</div>
+<div>What <strong>has</strong> changed is how they're being <em>stored</em> and <em>generated</em>.</div>
+<div>What's <em>different</em>?</div>
+<div>1. Use <strong>vector data</strong></div>
+<div>2. Convert the <strong>vector data</strong> from its original format to <em>vector tile format (PBF, or protocol buffers)</em>.</div>
+<div>3. <strong>Style</strong> the data with  <em>CartoCSS</em></div>
+<div>4. When a style is requested in the browser, Mapnik takes the style, grabs the source it references, and creates image tiles ON THE FLY to serve to the browser.</div>
+<div data-bodyclass='mindblown'></div>
+<div>Why is this beneficial?</div>
+<div>A) Vector tiles are stored with all data attributes and can be styled with multiple styles.</div>
+<div>B) This is a way more compact system for data storage (not having to store retina and non-retina, etc).</div>
+<div>C) You can give Mapnik options on request (e.g. retina, multiple styles) and the tiles are created and served quickly.</div>
+<div>D) Hosting vector data independently of the style means it can be rendered in many different ways...</div>
+<div>... which has enabled one of the neatest innovations in map creation:</div>
+<div>GL!</div>
+<div>Some of you may have seen or heard of this crazy GL thing.</div>
+<div><iframe src='https://player.vimeo.com/external/125965258.hd.mp4?s=e47e44fb3826d9e9aee246f07df35703&profile_id=113'></iframe></div>
+
+<div>GL is a <em>different</em> way of <strong>rendering</strong> data on your screen.</div>
+<div>With both older raster tile creation and the newer vector tile creaton process, your map is requesting images -- slower.</div>
+<div>With GL, instead of passing the <strong>images</strong> to the browser...</div>
+<div>... you will actually pass the <em>vector data itself</em> to the browser...</div>
+<div>... where the <strong>WebGL processor</strong> will <em>render the graphics</em> <strong>right in your browser</strong> -- faster.</div>
+<div data-bodyclass='mindblown'></div>
+<div>This technology is in its <em>infancy</em>.</div>
+<div>We <strong>probably</strong> won't talk about it <em>too much</em> throughout the course</div>
+<div>but I wanted you to <strong>know</strong> that it exists before moving forward.</div>
+<div>BREAK?</div>
+
+
+
+
+
+<div>So next week we'll take the technical talk a step further and build some interactions with JavaScript.</div>
+<div>But I'm going to <em>switch gears</em> for the rest of today and go back to talking about <strong>data</strong>.</div>
+<div><strong>What data formats</strong> might you encounter when making a <em>web map</em>?</div>
 <div>By <em>a show of hands</em>, <strong>which of these you have encountered already</strong>?</div>
 <div><a href="http://en.wikipedia.org/wiki/Shapefile">Shapefile</a></div>
 <div><a href="http://help.arcgis.com/en/arcgisdesktop/10.0/help/index.html#//003n00000007000000">File geodatabases</a></div>
 <div><a href="http://en.wikipedia.org/wiki/Comma-separated_values">CSV (comma-separated values)</a></div>
 <div><a href="https://developers.google.com/kml/documentation/">KML</a></div>
 <div><a href="http://geojson.org">GeoJSON</a></div>
+<div><a href='https://mapbox.com/developers/vector-tiles'>Vector tile datasets</a></div>
 <div>You might also encounter <strong>geospatial databases</strong> like <em>PostGIS</em> or <em>SpatiaLite</em> that <strong>store</strong> and <strong>serve</strong> data dynamically.</div>
 <div><strong>All of these formats</strong> find themselves in the web mapping conversation. Often because you need to <em>convert</em> data between them.</div>
 <div>When it comes to <strong>data</strong> and <strong>web mapping</strong>, another <em>crucial</em> part of the conversation is <a href="http://osm.org">OpenStreetMap (OSM)</a>.</div>
@@ -397,17 +495,19 @@
 <div data-bodyclass='cityhall'><br><em>iD</em>: just click edit up in the corner︎</div>
 <div data-bodyclass='cityhall-editing'></div>
 <div data-bodyclass='cityhall-josm'>JOSM</div>
-<div>But <strong>what</strong> to edit? <em>Suggestions:</em></div>
-<div>Trace some <em>buildings</em></div>
-<div>Add some <em>addresses</em></div>
-<div>Add some <em>POIs (points of interest)</em></div>
+<div><strong>Important things to know</strong>:</div>
+<div><strong>ONE.</strong> No copying from <span style="color:blue">G</span><span style="color:red">o</span><span style="color:yellow">o</span><span style="color:blue">g</span><span style="color:green">l</span><span style="color:red">e</span> products!</div>
+<div><strong>TWO.</strong> OSM is licensed under the <em>Open Database License</em>. There are certain <a href="http://www.openstreetmap.org/copyright">restrictions and requirements</a> when <em>using</em> or <em>modifying</em> OSM data.</div>
+<div><strong>THREE.</strong> Tags. Each feature in OSM has a series of tags.</div>
+<div><code>building=yes</code> <code>power=substation</code> <code>highway=secondary</code></div>
 <div>To learn how to <strong>tag</strong> anything you add to the map: <a href="http://wiki.openstreetmap.org/wiki/Map_Features">wiki.osm.org / wiki / Map_Features</a></div>
 <div>Am I doing it the <em>right way</em>? Read about <a href="http://wiki.openstreetmap.org/wiki/Good_practice">wiki.osm.org / wiki / Good_practice</a></div>
 <div>Most important rule is to make <a href="http://wiki.openstreetmap.org/wiki/Good_changeset_comments">wiki.osm.org / wiki / Good_changeset_comments</a></div>
 <div>Let's <strong>give it a try</strong>!</div>
-<div><strong>Important things to know</strong>:</div>
-<div><strong>ONE.</strong> No copying from <span style="color:blue">G</span><span style="color:red">o</span><span style="color:yellow">o</span><span style="color:blue">g</span><span style="color:green">l</span><span style="color:red">e</span> products!</div>
-<div><strong>TWO.</strong> OSM is licensed under the <em>Open Database License</em>. There are certain <a href="http://www.openstreetmap.org/copyright">restrictions and requirements</a> when <em>using</em> or <em>modifying</em> OSM data.</div>
+<div>But <strong>what</strong> to edit? <em>Suggestions:</em></div>
+<div>Trace some <em>buildings</em></div>
+<div>Add some <em>addresses</em></div>
+<div>Add some <em>POIs (points of interest)</em></div>
 <div>Time for <em>advanced maneuvers</em>.</div>
 <div>Play <a href="http://maproulette.org">MapRoulette</a></div>
 <div data-bodyclass='maproulette'></div>
@@ -420,9 +520,6 @@
 <div data-bodyclass='fieldpapers2'></div>
 <div>Some places to <strong>learn more</strong>: <a href="http://learnosm.org">learnosm.org</a> / <a href="http://wiki.openstreetmap.org">wiki.osm.org</a> / <a href="http://help.openstreetmap.org">help.osm.org</a></div>
 <div><em>OSM</em> portion of this presentation borrows from <a href="maptime.github.io/osm-101">OSM 101</a>.</div>
-<div>BREAK</div>
-
-
 <div>Apart from the <strong>OSM</strong> project itself, <em>why</em> is <strong>OSM</strong> so <em>crucial</em> to web mapping?</div>
 <div>Because <strong>getting data is hard</strong>.</div>
 <div>But <em>OSM</em> makes it <strong>easy</strong>!</div>
@@ -452,114 +549,9 @@
 <div><a href="http://mapbox.com">Mapbox</a></div>
 <div><a href="http://arcgis.com">ArcGIS Online</a></div>
 <div>You can take things <em>much further</em> with <strong>JavaScript libraries</strong> like <a href="http://leafletjs.com">Leaflet</a>, <a href="http://d3js.com">D3</a>, and <a href="http://gis.stackexchange.com/questions/8032/how-do-various-javascript-mapping-libraries-compare">many others</a>.</div>
-
-
-
-
-<div>LET <strong>ME</strong> <em>STOP</em> YOU <strong>RIGHT</strong> <em>THERE</em>!</div>
-<div>It's <strong>cartography time</strong>!</div>
-<div>In print or on the web, <strong>maps</strong> are <em>information design</em>.</div>
-<div><em>Cartographers</em> have been thinking about how to do that effectively in print for <strong>hundreds of years</strong>.</div>
-<div>Too often in web mapping, design decisions are <em>constrained</em> by the <strong>tools available</strong>.</div>
-<div data-bodyclass='quote'>"Cartographers limit themselves – because of a lack of software skills or a client’s desired final product – to using <em>pre-fabricated tools</em> for Web map design (e.g., Google Maps, Esri’s ArcGIS Online). By the time data-organization and design decisions are considered, the potential efficacy of the map’s communication is already <em>grossly constrained</em> by the <em>limitations of the tool chosen</em>." - <a href="https://twitter.com/iMuehlenhaus">Ian Muehlenhaus</a> in <a href="http://utpjournals.metapress.com/content/q765k1l7423732l6/?p=81fc8c6f7eb8460f9ec9aba4318ddb07">Going Viral: The Look of Online Persuasive Maps</a></div>
-<div><em>Developers</em> don't understand <strong>mapping</strong> and <strong>mappers</strong> don't know how to <em>write code</em>.</div>
-<div>We're gonna <strong>change</strong> all that. Starting next time, we will talk more about <em>magical languages</em> of web mapping introduced earlier.</div>
-<div>(<strong>Don't</strong> be intimidated!)</div>
-<div><em>For the rest of today:</em> some <strong>vocabulary</strong> and <strong>key concepts</strong> in mapping to help us <em>think more critically</em> about web maps.</div>
-<div>There are <strong>several</strong> types of maps, but we can mostly break them down into <em>two</em> categories:</div>
-<div><em>Thematic maps</em></div>
-<div>and <strong>Reference maps</strong>.</div>
-<div data-bodyclass='quote'>"<strong>Thematic maps</strong> are data maps of a <em>specific subject</em> or for a <em>specific purpose</em>. Statistical thematic maps include a variety of different <strong>map types</strong> such as choropleth or shaded maps, dot maps, proportional symbol maps, and isarithmic maps." - <a href="https://www.census.gov/geo/maps-data/maps/thematic.html">U.S. Census Bureau</a></div>
-<div>Some <em>examples</em>:</div>
-<div data-bodyclass='team-gb'></div>
-<div data-bodyclass='cartogram'></div>
-<div data-bodyclass='dot-density'></div>
-<div data-bodyclass='dotmap'></div>
-<div data-bodyclass='quote'>"A <strong>reference map</strong> is a map that emphasizes the <em>geographic location</em> of features. ... For these maps, the goal is to display a lot of <em>different kinds of information</em> without drawing the reader's attention to any one theme of information more than any other theme." - <a href="http://mappingcenter.esri.com/index.cfm?fa=maps.aboutReference">Esri Mapping Center</a></div>
-<div><em>Why</em> might you use a <strong>reference map</strong>?</div>
-<div data-bodyclass='wayfinding1'>Wayfinding</div>
-<div data-bodyclass='wayfinding2'></div>
-<div data-bodyclass='transit'>Transit</div>
-<div data-bodyclass='navigation'>Navigation</div>
-<div data-bodyclass='topographic'>Topographic</div>
-<div>All of these <strong>map classes</strong> are well described in <em>print cartography</em>, but they have corollaries in <em>web cartography</em> as well.</div>
-<div><strong>Historically</strong>, web mapping has evolved without much <em>cartographic theory</em>.</div>
-<div>There was <strong>Google</strong>, and then there were <em>mashups</em>....</div>
-<div data-bodyclass='mashups'><br><br><a href="http://www.programmableweb.com/news/5-years-ago-today-web-mashup-was-born/2010/04/08">HousingMaps.com</a>, by <strong>Paul Rademacher</strong>, 2005</div>
-<div>... which led to an <em>explosion</em> in <strong>special thematic maps</strong>...</div>
-<div data-bodyclass='catmap'></div>
-<div>... that <em>defy classification</em>.</div>
-<div><ul><li><a href="http://en.wikipedia.org/wiki/Dot_distribution_map#One-to-one" target="_blank">one-to-one dot maps</a></li><li><a href="http://en.wikipedia.org/wiki/Choropleth_map" target="_blank">choropleth</a> or <a href="http://wiki.gis.com/wiki/index.php/Chorochromatic_Maps" target="_blank">chorochromatic</a> maps</li><li>"<a href="http://xkcd.com/1138/" target="_blank">heat maps</a>"</li></ul></div>
-<div data-bodyclass='webdotmap'></div>
-<div data-bodyclass='poly'></div>
-<div data-bodyclass='heatmap2'></div>
-<div>Many cartographers <strong>not fond</strong> of heat maps.</div>
-<div>The term <em>"heatmap"</em> is imprecise. <strong>Isopleth</strong>? <strong>Point density</strong>? <strong>Interpolation</strong>?</div>
-<div data-bodyclass='interpolation'></div>
-<div>On the web it usually means <em>kernel density</em> and usually just shows <a href="http://xkcd.com/1138/" target="_blank">population density</a>.</div>
-<div data-bodyclass='xkcd'></div>
-<div>Where the points are <strong>sparse</strong> or <strong>coincident</strong>, <em>kernel density</em> generates a <em>meaningless blur</em>:</div>
-<div><table><tr><td><img src="./images/hmblur2.png"></td></tr><tr><td><img src="./images/hmblur.png"></td></tr></table></div>
-<div>Common JavaScript libraries that generate <em>"heat maps"</em> dynamically use <strong>zoom level</strong> as a proxy for <strong>kernel size</strong>, which <em>makes no sense</em> analytically.</div>
-<div data-bodyclass='kerneldensity'></div>
-<div>The default color scheme is <strong>horrid</strong>. (Nicknames: <em>"Tacky Angry Rainbow"</em> and <em>"Angry Fruit Salad"</em>.)</div>
-<div data-bodyclass='tackyangryrainbow'>Tacky Angry Rainbow</div>
-<div data-bodyclass='angryfruitsalad'>Angry<br>Fruit<br>Salad</div>
-<div>They arise from demand from people who <strong>don't know what they are doing</strong>, but know they want to <em>show a lot of points on a map</em>.</div>
-<div>Alternative: <strong>clustering</strong>.</div>
-<div data-bodyclass='googlegeo'></div>
-<div>Entirely <em>different</em> (although they <strong>look similar</strong>): <a href="http://support.esri.com/en/knowledgebase/GISDictionary/term/dot%20density%20map">dot density maps</a>.</div>
-<div><iframe src="http://demographics.coopercenter.org/DotMap/index.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
-<div>Someone <em>clever</em> putting <strong>a lot of points</strong> on maps quite <strong>artfully</strong>: <a href="https://www.flickr.com/photos/walkingsf/sets/">Eric Fischer</a>.</div>
-<div data-bodyclass='enfnyc'></div>
-<div data-bodyclass='enflondon'></div>
-<div data-bodyclass='enfsf'></div>
-<div>We should still strive for <strong>sound cartography</strong> in <em>mashups</em>.</div>
-<div>A few <strong>high level concepts</strong> from cartography, which is a <em>visual</em> enterprise:</div>
-<div>1. Visual variables</div>
-<div data-bodyclass='vis-variables'></div>
-<div data-bodyclass='vis-variables2'></div>
-<div>2. Visual hierarchy</div>
-<div><table><tr><td><img src="./images/82_congo_elements_plopped.gif"></td><td>BAD<br>←<br><br>GOOD <br>→ </td><td><img src="./images/83_congo_portrait.gif"></td></tr></table></div>
-<div>3. Visual argument</div>
-<div data-bodyclass='vis-argument'></div>
-<div>An <strong>important concept</strong> for web cartography is <em>"screen real-estate"</em>.</div>
-<div data-bodyclass='phonemap'></div>
-<div><ul><li>Space is <em>scarce</em></li><li><strong>Mobile</strong> vs. <strong>desktop</strong></li><li><em>Fluid</em> vs. <em>compartmentalized</em> layout</li></div>
-<div><em>Panning</em> and <em>zooming</em>, which we will talk more about next time, are a way <strong>around</strong> all of this but.... for some maps it is <strong>overkill</strong> & potentially a <strong>cop-out</strong>.</div>
-<div><iframe src="http://leafletjs.com/examples/choropleth-example.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
-<div>The main thing the <strong>web</strong> brings to <strong>cartography</strong> is <em>interactivity</em>, which can take many forms.</div>
-<div>In <em>web design and development</em>, people make <strong>entire careers</strong> out of <em>designing for interactivity</em>.</div>
-<div>The field is called <strong>UI/UX</strong>, which is shorthand for <em>user interface and user experience</em>.</div>
-<div>It means you <strong>think through</strong> how people who visit your site will <em>interact</em> with it, and you design the <strong>interface</strong> to guide the user toward the <em>experience</em> you want them to have.</div>
-<div>UI/UX is a <strong>really important</strong> component in web mapping.</div>
-<div>(<strong>Project managers</strong> creating government web portals for geospatial data, <em>I am talking to you</em>.)</div>
-<div>For this reason, while it makes sense in <strong>print cartography</strong> to talk about <em>map readers</em>, in <strong>web cartography</strong> we talk about <em>map users</em>.</div>
-<div><strong>Next time</strong> we will explore some forms of <em>interactivity</em> that are <em>standard</em> in out-of-the-box tools.</div>
-<div>Panning & Zooming</div>
-<div data-bodyclass='panzoom'></div>
-<div>Info Boxes</div>
-<div data-bodyclass='infobox'></div>
-<div>Tooltips</div>
-<div><iframe src="http://www.greenpeace.org/international/Global/international/code/2012/marine-reserves-map/index.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
-<div>Highlighting</div>
-<div><iframe src="http://cf.datawrapper.de/YI8Ha/22/" frameborder="0" allowtransparency="true" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen width="800" height="600"></iframe></div>
-<div>Charts</div>
-<div data-bodyclass='chart'></div>
-<div>Embedded images/video</div>
-<div data-bodyclass='embed'></div>
-<div>Geocode box</div>
-<div data-bodyclass='geocode'></div>
-<div>"Zoom to my location" button</div>
-<div data-bodyclass='gotolocation'></div>
-<div>Animation</div>
-<div><iframe src="http://cartodb.github.com/oldweather_wwi/" width="1000" height="800" frameborder="0" scrolling="no"></iframe></div>
-<div>All these <em>whizz-bangs</em> are <strong>neato</strong>!</div>
-<div>But we must use them <strong>sparingly</strong>, <strong>wisely</strong>, and <strong>with purpose</strong>.</div>
-<div>So, you have some <em>homework</em>. But it's <em>fun homework</em>.</div>
-<div><em>FIRST:</em> Find a <strong>cool web map</strong> online and <em>bring the link</em> with you next week.</div>
-<div>Think about what <em>type</em> of web map it is and <strong>why</strong> you think it's a cool web map.</div>
-<div>Also think about how it could be <em>better</em>.</div>
+<div>Next time we'll talk more about <em>map interactions</em>, <strong>tools for building maps</strong>, and some <em>basic cartographic principles</em>.</div>
+<div>You have some <em>homework</em>. But it's <em>fun homework</em>.</div>
+<div><em>FIRST:</em> Find a <strong>cool web map</strong> online and <em>bring the link</em> with you next week as well as any <strong>questions</strong> you have about it.</div>
 <div><em>THEN:</em> Send me an <strong>email</strong> (ldiamond@ccsfgis.org) and tell me <em>what you want to learn</em> in the next few weeks.</div>
 <div>See you next week!</div>
 <div>Presentation made with <a href="http://www.macwright.org/big/">big</a></div>
