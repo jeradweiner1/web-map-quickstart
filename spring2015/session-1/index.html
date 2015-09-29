@@ -1,84 +1,9 @@
 <!DOCTYPE html><html><head><title>Web-Mapping Quickstart: Session 1</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <link href='../../big.css' rel='stylesheet' type='text/css' />
 <style>
-  .catmap {
-    background-image: url(./images/catmap.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
   .google {
     background-image: url(./images/google.png);
     background-repeat: no-repeat;
-  }
-  .paper-maps {
-    background-image: url(./images/paper_maps.jpg);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-    background-size: 80%;
-  }
-  .digital-maps {
-    background-image: url(./images/1-arcGIS.jpg);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .internet-maps {
-    background-image: url(./images/internetmaps.png);
-    background-repeat: no-repeat;
-    background-position: center 25px;
-    background-size: 50%;
-  }
-  .html {
-    background-image: url(./images/html.png);
-    background-repeat: no-repeat;
-    background-position: center 25px;
-  }
-  .team-gb {
-    background-image: url(./images/TeamGB_medalists.png);
-    background-repeat: no-repeat;
-    background-position: center 120px;
-    background-color: #fff;
-  }
-  .cartogram {
-    background-image: url(./images/cartogram.jpg);
-    background-repeat: no-repeat;
-    background-position: center 120px;
-    background-color: #fff;
-  }
-  .dot-density {
-    background-image: url(./images/dotdensity.png);
-    background-repeat: no-repeat;
-    background-position: center 2px;
-    background-size: 75%;
-  }
-  .dotmap {
-    background-image: url(./images/dotmap.png);
-    background-repeat: no-repeat;
-    background-position: center 2px;
-  }
-  .wayfinding1 {
-    background-image: url(./images/wayfinding.png);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .wayfinding2 {
-    background-image: url(./images/wayfinding2.png);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .transit {
-    background-image: url(./images/transit.png);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .navigation {
-    background-image: url(./images/navigation.png);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-  }
-  .topographic {
-    background-image: url(./images/topographic.png);
-    background-repeat: no-repeat;
-    background-position: center 5px;
   }
   .editathon {
     background-image: url(./images/editathon.jpeg);
@@ -171,73 +96,11 @@
   .awesome {
     background-image: url(./images/OpenAwesome.jpg);
     background-repeat: no-repeat;
-    background-position: center 200px;
-  }
-  .mashups {
-    background-image: url(./images/mashup.jpg);
-    background-repeat: no-repeat;
-    background-position: center 40px;
-  }
-  .credit {
-    font-size: 12;
-    font-family: serif;
+    background-position: center 5px;
   }
   .quote {
     font-family: serif;
     letter-spacing: 2px;
-  }
-  .webdotmap {
-    background-image: url(./images/webdotmap.png);
-    background-repeat: no-repeat;
-    background-position: center 150px;
-  }
-  .poly {
-    background-image: url(./images/poly.png);
-    background-repeat: no-repeat;
-    background-position: center 100px;
-  }
-  .heatmap2 {
-    background-image: url(./images/heatmap.png);
-    background-repeat: no-repeat;
-    background-position: center 40px;
-    background-size: 50%;
-    background-color: #fff;
-  }
-  .interpolation {
-    background-image: url(./images/interpolation.png);
-    background-repeat: no-repeat;
-    background-position: center 5px;
-    background-size: 55%;
-  }
-  .xkcd {
-    background-image: url(./images/heatmap_xkcd.png);
-    background-repeat: no-repeat;
-    background-position: center 1px;
-    background-size: 50%;
-    background-color: #fff;
-  }
-  .kerneldensity {
-    background-image: url(./images/kerneldensity.png);
-    background-repeat: no-repeat;
-    background-position: center 40px;
-    background-size: 90%;
-    background-color: #fff;
-  }
-  .tackyangryrainbow {
-    background-image: url(./images/tackyangryrainbow.png);
-    background-repeat: no-repeat;
-    background-position: center 45px;
-    background-size: 100%;
-    background-color: #fff;
-    color: #000;
-  }
-  .angryfruitsalad {
-    background-image: url(./images/arbitraryheatmap.png);
-    background-repeat: no-repeat;
-    background-position: center 40px;
-    background-size: 60%;
-    background-color: #fff;
-    color: #000;
   }
   .googlegeo {
     background-image: url(./images/googlegeo.png);
@@ -246,101 +109,253 @@
     background-color: #fff;
     background-size: 50%;
   }
-  .enfnyc {
-    background-image: url(./images/enf_nyc.jpg);
-    background-repeat: no-repeat;
-    background-position: center 50px;
-    background-color: #fff;
-  }
-  .enflondon {
-    background-image: url(./images/enf_london.jpg);
-    background-repeat: no-repeat;
-    background-position: center 50px;
-    background-color: #fff;
-  }
-  .enfsf {
-    background-image: url(./images/enf_sf.jpg);
-    background-repeat: no-repeat;
-    background-position: center 50px;
-    background-color: #fff;
-  }
-  .vis-variables {
-    background-image: url(./images/visual_variables.png);
-    background-repeat: no-repeat;
-    background-position: center 50px;
-    background-color: #fff;
-  }
-  .vis-variables2 {
-    background-image: url(./images/visual_variables2.png);
-    background-repeat: no-repeat;
-    background-position: center 50px;
-    background-color: #fff;
-  }
-  .vis-argument {
-    background-image: url(./images/visual_argument.png);
-    background-repeat: no-repeat;
-    background-position: center 1px;
-    background-color: #fff;
-  }
-  .phonemap {
-    background-image: url(./images/phonemap.jpg);
-    background-repeat: no-repeat;
-    background-position: center 40px;
-    background-color: #fff;
-  }
-  .panzoom {
-    background-image: url(./images/panzoom.png);
-    background-repeat: no-repeat;
-    background-position: center 40px;
-    background-color: #fff;
-  }
-  .infobox {
-    background-image: url(./images/infobox.png);
-    background-repeat: no-repeat;
-    background-position: center 40px;
-    background-color: #fff;
-  }
-  .chart {
-    background-image: url(./images/chart.png);
-    background-repeat: no-repeat;
-    background-position: center 40px;
-    background-color: #fff;
-  }
-  .embed {
-    background-image: url(./images/embed.png);
-    background-repeat: no-repeat;
-    background-position: center 20px;
-    background-color: #fff;
-    background-size: 85%;
-  }
-  .geocode {
-    background-image: url(./images/geocode.png);
-    background-repeat: no-repeat;
-    background-position: center 40px;
-    background-color: #fff;
-  }
-  .gotolocation {
-    background-image: url(./images/gotolocation.png);
-    background-repeat: no-repeat;
-    background-position: center 40px;
-    background-color: #fff;
-  }
+
   .puppy {
     background-image: url(http://i.giphy.com/LPQ943m8yMcpy.gif);
     background-repeat: no-repeat;
-    background-position: center 255px;
+    background-position: center 5px;
+  }
+  .francemaps {
+    background-image: url(./images/francemaps.png);
+    background-repeat: no-repeat;
+    background-position: center 5px;
   }
   .webmap {
     background-image: url(./images/webmap.png);
     background-repeat: no-repeat;
-    background-position: center 40px;
+    background-position: center 5px;
     background-color: #fff;
   }
   .mapboxworld {
     background-image: url(./images/mapboxworld.png);
-    background-position: center 25px;
+    background-position: center 5px;
     background-size: 99%;
     background-repeat: no-repeat;
+  }
+  .mappa-mundi {
+    background-image: url(http://www.themappamundi.co.uk/img/mapImages/mappa-facsimile.jpg);
+    background-position: center 5px;
+    background-repeat: no-repeat;
+  }
+  .puppy1 {
+    background-image: url(./images/puppy1.gif);
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: center 5px;
+  }
+.iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.hiframe iframe {
+  position: absolute;
+  top: calc(0 - 200px);
+  
+    width: calc(100% + 1000px);
+    min-height: calc(100% + 800px);
+}
+
+.mapquest {
+    background-image: url(./images/2-Ridgefield-CT-Mapquest-out.jpg);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .old-google {
+    background-image: url(./images/3-old-google-maps-2.JPG);
+    background-repeat: no-repeat;
+    background-position: center 30px;
+  }
+  .slippy-map {
+    background-image: url(./images/slippy-map.gif);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .tile-loading {
+    background-image: url(./images/tiles-loading.gif);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .zoom0 {
+    background-image: url(./images/zoom0.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-color: white;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .geojson {
+    background-image: url(./images/geojson.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 1px;
+    background-color: white;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .init {
+    background-image: url(./images/init.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 1px;
+    background-color: white;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .mindblown {
+    background-image: url(./images/mindblown.gif);
+  }
+  .studio {
+    background-image: url(./images/studio.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 1px;
+    background-color: white;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .osm {
+    background-image: url(./images/osm.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 1px;
+    background-color: white;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .addtomap {
+    background-image: url(./images/addtomap.png);
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: center 25px;
+    background-color: white;
+    text-shadow: 3px 3px 5px #222;
+  }
+.stations {
+    background-image: url(./images/stations.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 1px;
+    background-color: white;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .turf {
+    background-image: url(./images/turf.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 1px;
+    background-color: white;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .marker2 {
+    background-image: url(./images/marker2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 1px;
+    background-color: white;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .taginfo {
+    background-image: url(./images/taginfo.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 1px;
+    background-color: white;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .zoom1 {
+    background-image: url(./images/zoom1.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-color: white;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .zoom2345 {
+    background-image: url(./images/zoom2-3-4-5.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-color: white;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .center {
+    text-align: center;
+  }
+  .quote {
+    font-family: serif;
+    letter-spacing: 2px;
+  }
+  .roadtrippers {
+    background-image: url(./images/roadtrippers.png);
+    background-size: 100%;
+  }
+  .wheatpaste {
+    background-image: url(./images/wheatpaste.png);
+    background-size: 100%;
+  }
+  .pencil {
+    background-image: url(./images/pencil.png);
+    background-size: 100%;
+  }
+  .studio {
+    background-image: url(./images/mapbox-studio.png);
+    background-position: center 5px;
+    background-size: 20%;
+  }
+  .vector {
+    background-image: url(./images/vectortiles.png);
+    background-position: center 5px;
+    background-size: 20%;
+    text-shadow: 3px 3px 5px #222;
+  }
+  .ready {
+    background-image: url(http://i.giphy.com/75yYfqYy5tmHm.gif);
+    background-position: center 5px;
+  }
+  .tiles {
+    background-image: url(http://i.giphy.com/J2LWi9tyE2xeE.gif);
+    text-shadow: 3px 3px 5px #222;
+    color: #eee;
+  }
+  .tilegif {
+    background-image: url(./images/tiles.gif);
+    background-repeat: no-repeat;
+    background-position: center 60px;
+  }
+  .jstile {
+    background-image: url(./images/jstile.png);
+  }
+  .mindblown {
+    background-image: url(http://i.giphy.com/DqSw5gyRQ5yPC.gif);
+  }
+  .style-editor {
+    background-image: url(./images/style-editor.png);
+    background-position: center 5px;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    text-shadow: 3px 3px 5px #222;
+  }
+
+  .presidio-vt {
+    background-image: url(./images/presidio-vt.png);
+    background-position: center 5px;
+    background-size: 85%;
+    background-repeat: no-repeat;
+  }
+  .presidio-style {
+    background-image: url(./images/presidio-style.png);
+    background-position: center 5px;
+    background-size: 85%;
+    background-repeat: no-repeat;
+  }
+
+  .cactus {
+    background-image: url(./images/cactus.jpg);
+    background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: center 5px;
+  }
+  .earthquake {
+    background-image: url(https://i.imgur.com/2NsKuYb.gif);
   }
 </style>
 <script src='../../big.js'></script>
@@ -349,120 +364,34 @@
 <div>Hi! I'm Lyzi. You can reach me at <a href='https://twitter.comlyzidiamond'>@lyzidiamond</a> or <strong>ldiamond@ccsfgis.org</strong>.</div>
 <div>I used to be a <strong>GIS analyst</strong>. Then I was a fellow at <a href='https://codeforamerica.org'>Code for America</a>. Now I work at <a href='https://mapbox.com/'>Mapbox</a>!</div>
 <div><em>Three</em> questions for you:<ul><li><strong>Who</strong> are you?</li><li><em>Why</em> did you sign up?</li><li><em>What</em> are you <strong>excited</strong> about learning?</li></ul></div>
-<div>I want to <strong>orient</strong> this course to your interests.</div>
-<div>If you <em>ever</em> have questions, <strong>please</strong> interrupt and ask.</div>
-<div>If you see something cool online and want to learn how it works, let me know and we can do that.</div>
-<div>Regardless, by the end of this class you should:</div>
+<div>I want to <strong>orient*</strong> this course to your interests.</div>
+<div><strong>*</strong>But first, a <em>tangent</em>!</div>
+<div>Do you the origin of the word <strong>orient</strong>?</div>
+<div>The latin word <em>oriens</em> means <strong>East</strong>.</div>
+<div>During the medieval age, <em>map creation</em> was influenced by <strong>religious doctrine</strong>.</div>
+<div>Maps pointed <em>East</em> towards <strong>Jerusalem</strong>!</div>
+<div data-bodyclass='mappa-mundi'></div>
+<div data-bodyclass='puppy1'>Anyway...</div>
+<div>By the end of this class you should:</div>
 <div>1. Be able to <em>think critically</em> about web maps</div>
 <div>2. <strong>Understand</strong> how web maps are <em>built</em></div>
 <div>3. Have a <strong>semi-thorough vocabulary</strong></div>
 <div>4. Feel <em>confident</em> and <em>stoked</em> about what you've accomplished!</div>
-<div data-bodyclass='puppy'>Also: lots of cute animal gifs.</div>
+<div data-bodyclass='puppy'><strong>Also: lots of cute animal gifs.</strong></div>
 <div><strong>Today</strong> we are going to talk about the <em>basics of web maps</em>: their <strong>history</strong>, how they <em>work</em>, and some <strong>basic vocabulary</strong>.</div>
 <div>Let's get started!</div>
 <div>So <strong>what is a web map</strong>?</div>
 <div>Most literally: <em>a map on the web</em>.</div>
+<div data-bodyclass='francemaps'>These are web maps.</div>
 <div>We can make maps <strong>anywhere</strong> and put them on the <em>web</em>...</div>
 <div data-bodyclass='webmap'></div>
 <div>... or we can use the <strong>web</strong> to make <em>maps</em>.</div>
 <div data-bodyclass='mapboxworld'></div>
 <div>So <strong>what</strong> makes a <em>map</em>?</div>
 <div>Maps are made of <strong>styled geographic data</strong>.</div>
+<div><img src='./images/california-xray.png'></div>
 <div>There are <em>many</em> <strong>geographic data formats</strong>.</div>
 <div>They typically link <em>shapes and locations</em> with <em>attributes</em>, and sometimes encode <strong>styling</strong>.</div>
-<div>So a <em>map</em> is made up of <strong>styled spatial data</strong>.</div>
-<div>But <em>how</em> do we get it on the web?</div>
-<div>When we think of a <em>web map</em>, we think of something <strong>interactive</strong>.</div>
-<div>We can <em>pan</em> and <em>zoom</em> and <em>click</em> on things to get more information about them.</div>
-<div>Let's talk about <strong>how these maps are made</strong> so when we <em>make them ourselves</em> we know what we're doing!</div>
-<div>Let's go <strong>back in time</strong>.</div>
-<div data-bodyclass='mapquest'><br><br><br><em>In 1996, Mapquest launched its web service.</em></div>
-<div>Directions for driving! <em>Online!</em> <strong>Wow!</strong></div>
-<div>The problem: it was <strong>slow</strong> to load :(.</div>
-<div>Mapquest required a <em>full page refresh</em> to scroll or zoom and was always <strong>aligned to map image boundaries</strong>.</div>
-<div>Then, in 2005, came <em>Google Maps</em>. This revolutionized <strong>everything</strong>.</div>
-<div data-bodyclass='old-google'></div>
-<div><em>But what was the revolution?</em><br>Was it the <strong>interface</strong>?<br>The <strong>red marker</strong>?<br>The <strong>weather widget</strong>?</div>
-<div>No!</div>
-<div>It was the <em>tile. <img src="./images/toner.jpg"></em></div>
-<div>In particular, the <strong>raster</strong> tile.</div>
-<div><em>Raster tiles</em> are 256px x 256px <strong>PNG</strong> files that are <em>stored</em> on the server and <em>served</em> to the browser on request.</div>
-<div><strong>Each tile</strong> is <em>one piece</em> of the map in a <strong>grid</strong> of pieces.</div>
-<div>You may think of this as a <em>basemap</em>.</div>
-<div data-bodyclass="slippy-map">(This kind of map is colloquially called a <strong>slippy map</strong>.)</div>
-<div data-bodyclass='tile-loading'><strong>Only</strong> the tiles in the <em>current map view</em> are requested and loaded. This makes modern web maps <strong>super hella fast</strong>.</div>
-<div>Raster tiles are available at <em>preset zoom levels</em> with a <strong>different</strong> set of tiles at each zoom.</div>
-<div data-bodyclass='zoom0'><em>Zoom level 0: one tile for the world.</em></div>
-<div><strong>Number of tiles</strong> = <em>2^z</em> x <em>2^z</em>.</div>
-<div data-bodyclass='zoom1'><em>Zoom level 1: 4 tiles for the world.</em></div>
-<div data-bodyclass='zoom2345'><br><br><br><em>Zoom level 2, 3, 4, 5</em></div>
-<div>These <strong>tiles</strong> are made with a <em>super hella awesome cool open source</em> tool called <a href='http://mapnik.org'>Mapnik</a>.</div>
-<div><em>Mapnik</em> is what makes <strong>all of this possible</strong>.</div>
-<div>What does <em>Mapnik</em> do?</div>
-<div>Let's look at how <em>raster tiles</em> are made.</div>
-<div>1. Use <strong>vector data</strong> (shapefile, GeoJSON, etc)</div>
-<div>2. <strong>Style</strong> the data with a styling language called <em>CartoCSS</em></div>
-<div>3. <strong>Export</strong> data and stylesheet to a <em>renderer</em> (Mapnik) that creates tiled images.</div>
-<div>The images are <em>created</em> at each zoom level and stored in a <strong>specific file structure</strong> as PNGs.</div>
-<div>That makes <em>sense, right</em>?</div>
-<div><strong>Vector data</strong> + <em>style</em> = image with style applied to data.</div>
-<div>(If you are familiar with <em>TileMill</em>, this is what that application did.)</div>
-<div>Then, using a <strong>web mapping library</strong> like <a href='https://leafletjs.com'>Leaflet</a>, you create a <em>map container</em> that knows when to load which tiles from your <strong>tile server</strong>.</div>
-<div>When your map needs the image tile for a <strong>particular area</strong> at a <strong>particular zoom</strong>, your map container (via the browser) <em>requests</em> it from the server.</div>
-<div>Hooray! A map!</div>
-<div>This was <strong>innovative</strong> in 2005...</div>
-<div>... but it's also <em>limiting</em>, <strong>especially</strong> with the introduction of <em>retina displays</em>.</div>
-<div>With <strong>retina displays</strong> came the need for <em>larger</em>, <em>denser</em> map tiles...</div>
-<div>... all while keeping support for <strong>non-retina</strong> screens.</div>
-<div>That meant storing <em>twice</em> as many map tiles, which was a <strong>huge bummer</strong>!</div>
-<div>And thus was born the <em>vector tile</em>.</div>
-<div><strong>Before I continue</strong>, are there <em>any questions</em>?</div>
-<div>More <em>recently</em>, we've graduated to <a href='https://www.mapbox.com/developers/vector-tiles/'>vector tiles</a>.</div>
-<div>Vector tiles are <strong>similar</strong> to raster tiles...</div>
-<div>... but <em>instead</em> of creating <strong>tiled images</strong>, we create <em>tiled vector data</em> that can be <strong>rendered</strong> in the browser.</div>
-<div>All of this still happens with <em>Mapnik</em>. All hail <em>Mapnik</em>.</div>
-<div>Roads, <strong>parks</strong>, <em>water bodies</em>, bike paths, <strong>points of interest</strong>, <em>state boundaries</em>...</div>
-<div>... all of this is <strong>vector data</strong> with <em>attributes</em> attached to it.</div>
-<div data-bodyclass='geojson'></div>
-<div>Vector tiles <em>store</em> all of this information, <strong>attributes</strong> included, as <em>protocol buffers</em>, or <em>PBF</em> files.</div>
-<div><strong>Protocol buffers</strong> are <em>super lightweight</em> and <em>compact</em>.</div>
-<div>To be <strong>quite honest</strong>, this <em>doesn't</em> change things on the <strong>client-side</strong> all that much.</div>
-<div>Your maps are <em>still</em> made up of raster tiles.</div>
-<div>BUT</div>
-<div>What <strong>has</strong> changed is how they're being <em>stored</em> and <em>generated</em>.</div>
-<div>What's <em>different</em>?</div>
-<div>1. Use <strong>vector data</strong></div>
-<div>2. Convert the <strong>vector data</strong> from its original format to <em>vector tile format (PBF, or protocol buffers)</em>.</div>
-<div>3. <strong>Style</strong> the data with  <em>CartoCSS</em></div>
-<div>4. When a style is requested in the browser, Mapnik takes the style, grabs the source it references, and creates image tiles ON THE FLY to serve to the browser.</div>
-<div data-bodyclass='mindblown'></div>
-<div>Why is this beneficial?</div>
-<div>A) Vector tiles are stored with all data attributes and can be styled with multiple styles.</div>
-<div>B) This is a way more compact system for data storage (not having to store retina and non-retina, etc).</div>
-<div>C) You can give Mapnik options on request (e.g. retina, multiple styles) and the tiles are created and served quickly.</div>
-<div>D) Hosting vector data independently of the style means it can be rendered in many different ways...</div>
-<div>... which has enabled one of the neatest innovations in map creation:</div>
-<div>GL!</div>
-<div>Some of you may have seen or heard of this crazy GL thing.</div>
-<div><iframe src='https://player.vimeo.com/external/125965258.hd.mp4?s=e47e44fb3826d9e9aee246f07df35703&profile_id=113'></iframe></div>
-
-<div>GL is a <em>different</em> way of <strong>rendering</strong> data on your screen.</div>
-<div>With both older raster tile creation and the newer vector tile creaton process, your map is requesting images -- slower.</div>
-<div>With GL, instead of passing the <strong>images</strong> to the browser...</div>
-<div>... you will actually pass the <em>vector data itself</em> to the browser...</div>
-<div>... where the <strong>WebGL processor</strong> will <em>render the graphics</em> <strong>right in your browser</strong> -- faster.</div>
-<div data-bodyclass='mindblown'></div>
-<div>This technology is in its <em>infancy</em>.</div>
-<div>We <strong>probably</strong> won't talk about it <em>too much</em> throughout the course</div>
-<div>but I wanted you to <strong>know</strong> that it exists before moving forward.</div>
-<div>BREAK?</div>
-
-
-
-
-
-<div>So next week we'll take the technical talk a step further and build some interactions with JavaScript.</div>
-<div>But I'm going to <em>switch gears</em> for the rest of today and go back to talking about <strong>data</strong>.</div>
 <div><strong>What data formats</strong> might you encounter when making a <em>web map</em>?</div>
 <div>By <em>a show of hands</em>, <strong>which of these you have encountered already</strong>?</div>
 <div><a href="http://en.wikipedia.org/wiki/Shapefile">Shapefile</a></div>
@@ -523,9 +452,9 @@
 <div>Apart from the <strong>OSM</strong> project itself, <em>why</em> is <strong>OSM</strong> so <em>crucial</em> to web mapping?</div>
 <div>Because <strong>getting data is hard</strong>.</div>
 <div>But <em>OSM</em> makes it <strong>easy</strong>!</div>
-<div>You can download <em>the whole planet</em> from <strong>OpenStreetMap</strong> for <em>free</em>!</div>
 <div data-bodyclass='awesome'></div>
 <div>(that drawing by <a href="https://twitter.com/meghanhade">Meghan Hade</a>)</div>
+<div>You can download <em>the whole planet</em> from <strong>OpenStreetMap</strong> for <em>free</em>!</div>
 <div>Planet.osm</div>
 <div>(This is <strong>not</strong> recommended. The file is <em>huge</em>.)</div>
 <div><strong>But:</strong> If you see geodata with the file extension <em>.osm</em>, <strong>don't panic</strong>.</div>
@@ -549,7 +478,111 @@
 <div><a href="http://mapbox.com">Mapbox</a></div>
 <div><a href="http://arcgis.com">ArcGIS Online</a></div>
 <div>You can take things <em>much further</em> with <strong>JavaScript libraries</strong> like <a href="http://leafletjs.com">Leaflet</a>, <a href="http://d3js.com">D3</a>, and <a href="http://gis.stackexchange.com/questions/8032/how-do-various-javascript-mapping-libraries-compare">many others</a>.</div>
+<div>BREAK</div>
+
+
 <div>Next time we'll talk more about <em>map interactions</em>, <strong>tools for building maps</strong>, and some <em>basic cartographic principles</em>.</div>
+<div>Before that, let's talk about <strong>how web maps actually work</strong>.</div>
+<div>So a <em>map</em> is made up of <strong>styled spatial data</strong>.</div>
+<div>But <em>how</em> do we get it on the web?</div>
+<div>When we think of a <em>web map</em>, we think of something <strong>interactive</strong>.</div>
+<div>We can <em>pan</em> and <em>zoom</em> and <em>click</em> on things to get more information about them.</div>
+<div>Like <a href='http://sfstreets.noahveltman.com/'>SF Streets</a> by Noah Veltman!</div>
+<div>Let's talk about <strong>how these maps are made</strong> so when we <em>make them ourselves</em> we know what we're doing!</div>
+<div>Let's go <strong>back in time</strong>.</div>
+<div data-bodyclass='mapquest'><br><br><br><em>In 1996, Mapquest launched its web service.</em></div>
+<div>Directions for driving! <em>Online!</em> <strong>Wow!</strong></div>
+<div>The problem: it was <strong>slow</strong> to load :(.</div>
+<div>Mapquest required a <em>full page refresh</em> to scroll or zoom and was always <strong>aligned to map image boundaries</strong>.</div>
+<div>Then, in 2005, came <em>Google Maps</em>. This revolutionized <strong>everything</strong>.</div>
+<div data-bodyclass='old-google'></div>
+<div><em>But what was the revolution?</em><br>Was it the <strong>interface</strong>?<br>The <strong>red marker</strong>?<br>The <strong>weather widget</strong>?</div>
+<div>No!</div>
+<div>It was the <em>tile. <img src="./images/toner.jpg"></em></div>
+<div>In particular, the <strong>raster</strong> tile.</div>
+<div><em>Raster tiles</em> are 256px x 256px <strong>PNG</strong> files that are <em>stored</em> on the server and <em>served</em> to the browser on request.</div>
+<div><strong>Each tile</strong> is <em>one piece</em> of the map in a <strong>grid</strong> of pieces.</div>
+<div>You may think of this as a <em>basemap</em>.</div>
+<div data-bodyclass="slippy-map">(This kind of map is colloquially called a <strong>slippy map</strong>.)</div>
+<div data-bodyclass='tile-loading'><strong>Only</strong> the tiles in the <em>current map view</em> are requested and loaded. This makes modern web maps <strong>super hella fast</strong>.</div>
+<div>Raster tiles are available at <em>preset zoom levels</em> with a <strong>different</strong> set of tiles at each zoom.</div>
+<div data-bodyclass='zoom0'><em>Zoom level 0: one tile for the world.</em></div>
+<div><strong>Number of tiles</strong> = <em>2^z</em> x <em>2^z</em>.</div>
+<div data-bodyclass='zoom1'><em>Zoom level 1: 4 tiles for the world.</em></div>
+<div data-bodyclass='zoom2345'><br><br><br><em>Zoom level 2, 3, 4, 5</em></div>
+<div>These <strong>tiles</strong> are made with a <em>super hella awesome cool open source</em> tool called <a href='http://mapnik.org'>Mapnik</a>.</div>
+<div><em>Mapnik</em> is what makes <strong>all of this possible</strong>.</div>
+<div>What does <em>Mapnik</em> do?</div>
+<div>Let's look at how <em>raster tiles</em> are made.</div>
+<div>1. Use <strong>vector data</strong> (shapefile, GeoJSON, etc)</div>
+<div>2. <strong>Style</strong> the data with a styling language called <em>CartoCSS</em></div>
+<div data-bodyclass='style-editor'></div>
+<div>3. <strong>Export</strong> data and stylesheet to a <em>renderer</em> (Mapnik) that creates tiled images.</div>
+<div>The images are <em>created</em> at each zoom level and stored in a <strong>specific file structure</strong> as PNGs.</div>
+<div>That makes <em>sense, right</em>?</div>
+<div><strong>Vector data</strong> + <em>style</em> = image with style applied to data.</div>
+<div>(If you are familiar with <em>TileMill</em>, this is what that application did.)</div>
+<div>Then, using a <strong>web mapping library</strong> like <a href='https://leafletjs.com'>Leaflet</a>, you create a <em>map container</em> that knows when to load which tiles from your <strong>tile server</strong>.</div>
+<div>When your map needs the image tile for a <strong>particular area</strong> at a <strong>particular zoom</strong>, your map container (via the browser) <em>requests</em> it from the server.</div>
+<div><a href='https://mapbox.com/mapbox.js/examples'>For example</a></div>
+<div>Hooray! A map!</div>
+<div>This was <strong>innovative</strong> in 2005...</div>
+<div>... but it's also <em>limiting</em>, <strong>especially</strong> with the introduction of <em>retina displays</em>.</div>
+<div>With <strong>retina displays</strong> came the need for <em>larger</em>, <em>denser</em> map tiles...</div>
+<div>... all while keeping support for <strong>non-retina</strong> screens.</div>
+<div>That meant storing <em>twice</em> as many map tiles, which was a <strong>huge bummer</strong>!</div>
+<div>And thus was born the <em>vector tile</em>.</div>
+<div><strong>Before I continue</strong>, are there <em>any questions</em>?</div>
+<div>More <em>recently</em>, we've graduated to <a href='https://www.mapbox.com/developers/vector-tiles/'>vector tiles</a>.</div>
+<div>Vector tiles are <strong>similar</strong> to raster tiles...</div>
+<div>... but <em>instead</em> of creating <strong>tiled images</strong>, we create <em>tiled vector data</em> that can be <strong>rendered</strong> in the browser.</div>
+<div data-bodyclass='presidio-vt'></div>
+<div data-bodyclass='presidio-style'></div>
+<div>All of this still happens with <em>Mapnik</em>. All hail <em>Mapnik</em>.</div>
+<div>Roads, <strong>parks</strong>, <em>water bodies</em>, bike paths, <strong>points of interest</strong>, <em>state boundaries</em>...</div>
+<div>... all of this is <strong>vector data</strong> with <em>attributes</em> attached to it.</div>
+<div data-bodyclass='geojson'></div>
+<div>Vector tiles <em>store</em> all of this information, <strong>attributes</strong> included, as <em>protocol buffers</em>, or <em>PBF</em> files.</div>
+<div><strong>Protocol buffers</strong> are <em>super lightweight</em> and <em>compact</em>.</div>
+<div>To be <strong>quite honest</strong>, this <em>doesn't</em> change things on the <strong>client-side</strong> all that much.</div>
+<div>Your maps are <em>still</em> made up of raster tiles.</div>
+<div>BUT</div>
+<div>What <strong>has</strong> changed is how they're being <em>stored</em> and <em>generated</em>.</div>
+<div>What's <em>different</em>?</div>
+<div>1. Use <strong>vector data</strong></div>
+<div>2. Convert the <strong>vector data</strong> from its original format to <em>vector tile format (PBF, or protocol buffers)</em>.</div>
+<div>3. <strong>Style</strong> the data with  <em>CartoCSS</em></div>
+<div>4. When a style is requested in the browser, Mapnik takes the style, grabs the source it references, and creates image tiles <em>ON THE FLY</em> to serve to the browser.</div>
+<div data-bodyclass='mindblown'></div>
+<div><strong>Why</strong> is this beneficial?</div>
+<div>A) Vector tiles are <em>stored</em> with all data attributes and can be <em>styled</em> with multiple styles.</div>
+<div>B) This is a way more <strong>compact</strong> system for data storage (not having to store retina and non-retina, etc).</div>
+<div>C) You can give Mapnik <em>options on request</em> (e.g. retina, multiple styles) and the tiles are <strong>created</strong> and <strong>served quickly</strong>
+  .</div>
+<div>D) Hosting vector data <strong>independently</strong> of the style means it can be rendered in <em>many</em> different ways...</div>
+<div>... which has enabled one of the <strong>neatest</strong> innovations in map creation:</div>
+<div data-bodyclass='earthquake'>GL!</div>
+<div>Some of you may have seen or heard of this <em>crazy</em> GL thing.</div>
+<div><iframe src='https://player.vimeo.com/external/125965258.hd.mp4?s=e47e44fb3826d9e9aee246f07df35703&profile_id=113'></iframe></div>
+
+<div>GL is a <em>different</em> way of <strong>rendering</strong> data on your screen.</div>
+<div>With both <em>older</em> raster tile creation and the <strong>newer</strong> vector tile creation process, your map is requesting <em>images</em> -- slower.</div>
+<div>With GL, instead of passing the <strong>images</strong> to the browser...</div>
+<div>... you will actually pass the <em>vector data itself</em> to the browser...</div>
+<div>... where the <strong>WebGL processor</strong> will <em>render the graphics</em> <strong>right in your browser</strong> -- faster.</div>
+<div data-bodyclass='mindblown'></div>
+<div>This technology is in its <em>infancy</em>.</div>
+<div>We <strong>probably</strong> won't talk about it <em>too much</em> throughout the course</div>
+<div>but I wanted you to <strong>know</strong> that it exists before moving forward.</div>
+<div>So, with that, you are now <em>more knowledgeable</em> about how web maps work than <strong>most</strong> people who make web maps.</div>
+<div>APIs and other tools make it <em>so simple</em> to create and interact with web maps that most people <strong>don't</strong> know how it all works.</div>
+<div>But <em>knowing how it works</em> becomes <strong>so helpful</strong> down the road when you start <em>building</em>.</div>
+<div>I know it's <em>a lot of information</em> I'm throwing at you.</div>
+<div>Don't worry! You are a <strong>champion</strong>!</div>
+<div data-bodyclass='cactus'></div>
+
+
+
 <div>You have some <em>homework</em>. But it's <em>fun homework</em>.</div>
 <div><em>FIRST:</em> Find a <strong>cool web map</strong> online and <em>bring the link</em> with you next week as well as any <strong>questions</strong> you have about it.</div>
 <div><em>THEN:</em> Send me an <strong>email</strong> (ldiamond@ccsfgis.org) and tell me <em>what you want to learn</em> in the next few weeks.</div>
