@@ -66,6 +66,7 @@
     background-repeat: no-repeat;
     background-position: center 1px;
     background-size: 100%;
+    text-shadow: 0.1em 0.1em #000;
   }
   .mapbox2 {
     background-image: url(./images/mapbox2.png);
@@ -134,6 +135,12 @@
     background-position: center 1px;
     background-size: 100%;
   }
+  .earthquakes-45 {
+    background-image: url(./images/earthquakes-45.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+  }
   .largelots {
     background-image: url(./images/largelots.png);
     background-repeat: no-repeat;
@@ -164,13 +171,31 @@
     background-position: center 1px;
     background-size: 100%;
   }
+  .cdb-new-map {
+    background-image: url(./images/cdb-new-map.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+  }
+  .cdb-url {
+    background-image: url(./images/cdb-url.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+  }
+  .cdb-earthquakes {
+    background-image: url(./images/cdb-earthquakes.png);
+    background-repeat: no-repeat;
+    background-position: center 1px;
+    background-size: 100%;
+  }
   .europe-faces {
     background-image: url(http://photos1.blogger.com/blogger/5379/496/1600/europe.0.jpg);
     background-repeat: no-repeat;
     background-position: center 1px;
   }
-  .mapbox-pricing {
-    background-image: url(./images/mapbox-pricing.png);
+  .cartodb-pricing {
+    background-image: url(./images/cartodb-pricing.png);
     background-repeat: no-repeat;
     background-position: center 1px;
     background-size: 90%;
@@ -260,7 +285,7 @@
 
 <div>Web Mapping <em>Quick Start</em> <strong>Session 2</strong>!</div>
 <div>Last week I gave you some <em>homework</em>. Let's see some of those <strong>web maps</strong>.</div>
-<div>The <strong>URL</strong> if you want to <em>follow along</em> is <a href='http://lyzidiamond.com/web-map-quickstart/spring2015/session-2/'>http://lyzidiamond.com /web-map-quickstart /spring2015 /session-2/</a></div>
+<div>The <strong>URL</strong> if you want to <em>follow along</em> is <a href='http://lyzidiamond.com/web-map-quickstart/fall2015/session-2/'>http://lyzidiamond.com /web-map-quickstart /fall2015 /session-2/</a></div>
 <div><em>Today</em> we are going to talk about <strong>tools for web mapping</strong>.</div>
 <div>Some of these we call <em>platforms</em>.</div>
 <div>What is a <strong>web mapping platform</strong>?</div>
@@ -292,7 +317,8 @@
 <div>... which may (will probably) take <strong>extra time</strong> to load.</div>
 <div>Otherwise, you'll have to use <em>JavaScript</em>.<br><br>(We'll talk about that <strong>later</strong> and <em>next time</em> when we talk about <em>web-mapping from scratch</em>.)</div>
 <div><em>Drawback #2:</em> You are stuck in the <strong>basemap</strong> versus <em>content</em> paradigm</em> (e.g. <strong>mashups</strong>) with <em>data</em> layered on top of <strong>reference layers</strong> and <strong>labels</strong>.</div>
-<div>Remember last time I mentioned <em>key concepts</em> in <em>cartography</em>, such as <strong>visual hierarchy</strong> and creating <strong>visual arguments</strong>?</div>
+<div>Next time we will talk about <em>key concepts</em> in <em>cartography</em>, such as <strong>visual hierarchy</strong> and creating <strong>visual arguments</strong>, but quickly:</div>
+<div><em>Visual hierarchy</em> is the idea that what you're trying to <strong>emphasize</strong> on the map should be the <em>first</em> thing your eye is drawn to.</div>
 <div data-bodyclass='europe-faces'></div>
 <div>Displaying your <em>mastery of these concepts</em> can be tough if you can't <strong>integrate</strong> your <em>data</em> with your <em>basemap layers</em>.</div>
 <div data-bodyclass='mashup'></div>
@@ -301,18 +327,17 @@
 <div>There are <strong>ways around</strong> this.</div>
 <div>For example, the <a href="https://developers.google.com/maps/">Google Maps API</a> allows for <em>selective styling</em> of basemap layers that you can <em>intersperse</em> with your data...</div>
 <div>...but most people don't <em>bother</em> to do that.</div>
-<div data-bodyclass='yelp'></div>
-<div>We're <em>used</em> to web maps that look <strong>this way</strong>...</div>
-<div>...and, <strong>again</strong>, you'd need to use <em>JavaScript</em> to fix it.</div>
-<div><em>Drawback #3:</em> Every map <strong>pans</strong>, <strong>zooms</strong>, and has <strong>info boxes</strong></div>
+<div><a href='https://mapbox.com/mapbox-gl'>GL maps</a> will help with this, too...</div>
+<div>... but that technology is <strong>not</strong> widely available yet.</div>
+<div><em>Drawback #3:</em> Almost every map <strong>pans</strong>, <strong>zooms</strong>, and has <strong>info boxes</strong></div>
 <div>This <em>cookie-cutter</em> approach has the advantage of <strong>giving people what they expect</strong>...</div>
-<div>... but as we discussed last week, it can be <em>overkill</em>:</div>
+<div>... but sometimes it can be <em>overkill</em>:</div>
 <div><iframe src="http://leafletjs.com/examples/choropleth-example.html" width="1200" height="800" frameborder="0" scrolling="no"></iframe></div>
 <div>And it <strong>limits</strong> the diversity of <em>cartographic techniques</em> you can use.</div>
 <div><em>Drawback #4:</em> Mapping platforms typically cost <strong>hella $$$</strong></div>
 <div>Pricing structures vary, but may include <em>monthly</em> fees for <strong>hosting</strong>, fees based on <strong>usage</strong>, and <strong>licensing fees</strong>.</div>
 <div data-bodyclass='agol-pricing'></div>
-<div data-bodyclass='mapbox-pricing'></div>
+<div data-bodyclass='cartodb-pricing'></div>
 <div>That said, sometimes a <em>web mapping platform</em> is the <em>expedient</em> way to <strong>get things done</strong>.</div>
 <div>And the base-level <strong>free</strong> accounts are great for <em>learning</em> and <em>playing around</em>.</div>
 <div>Today we will play with some <strong>web mapping platforms</strong>:</div>
@@ -321,7 +346,7 @@
 <div><a href="https://cartodb.com">CartoDB</a></div>
 <div>You might be asking, <em>"What about Leaflet? What about JavaScript?"</em></div>
 <div><strong>Today</strong> we are going to focus on building maps <em>without</em> doing any <strong>programming</strong>.</div>
-<div>You can definitely do <em>more</em> with code, but but it's <strong>important</strong> to see what you can do <em>without</em> it.</div>
+<div>You can definitely do <em>more</em> with code, but it's <strong>important</strong> to see what you can do <em>without</em> it.</div>
 <div>We will also do <em>three exercises</em>.</div>
 <div>In <strong>Exercise 1</strong> we will play with static maps from the <em>Google Maps API</em> in the browser.</div>
 <div>In <strong>Exercise 2</strong> we will <em>draw markers</em> on a custom <a href="https://mapbox.com">Mapbox</a> basemap.</div>
@@ -393,7 +418,7 @@
 <div>Let's click on <em>Static Maps</em> in the left column and see!</div>
 <div>"Static maps are <strong>standalone images</strong> that can be displayed on web and mobile devices <em>without the aid of a mapping library or API</em>. A static map image uses the Mapbox <code style='color:gray;'>{mapid}</code> and looks like an embedded map <strong>without</strong> any interactivity or controls."</div>
 <div>This is just like we saw with the <em>Google Maps Static API</em>! But there are a <strong>couple differences</strong>. Let's look at the first <em>example URL</em>.</div>
-<div data-bodyclass='url'>http://api.tiles.mapbox.com/v4 /<em>{mapid}</em>/<em>{lon}</em>,<em>{lat}</em>,<em>{z}</em> /<em>{width}</em>x<em>{height}</em>.<em>{format}</em>? access_token=<em>&lt;your access token&gt;</em></div>
+<div data-bodyclass='url'>http://api.mapbox.com/v4 /<em>{mapid}</em>/<em>{lon}</em>,<em>{lat}</em>,<em>{z}</em> /<em>{width}</em>x<em>{height}</em>.<em>{format}</em>? access_token=<em>&lt;your access token&gt;</em></div>
 <div>What makes this <strong>different</strong> than the <em>Google Maps Static API</em>?</div>
 <div>Instead of using a <strong>descriptive location</strong> we are using <em>latitude and longitude</em>.</div>
 <div><em>z</em> instead of <strong>zoom</strong></div>
@@ -407,12 +432,12 @@
 <div>In <strong>this example</strong> and the <strong>previous one</strong> we are putting <em>data</em> on a maps.</div>
 <div>Let's take a <strong>deeper look</strong> at <em>basemaps</em>.</div>
 <div>What is a <strong>basemap</strong>?</div>
-<div>Remember our discussion last week of <strong>mashups</strong>. <em>Base</em>map. What is the <strong>implication</strong>?</div>
+<div><em>Base</em>map. What is the <strong>implication</strong>?</div>
 <div>When you have a <strong>base</strong>, you can build things on <em>top</em> of it. <strong>Right?</strong></div>
 <div data-bodyclass='cupcakebase'></div>
 <div data-bodyclass='cupcakes'></div>
 <div>This <strong>basemap</strong> is made up of <em>tiles</em> from <a href='https://mapbox.com'>Mapbox</a>.</div>
-<div>(We'll talk more about <em>how tiles work</em> next time.)</div>
+<div>You know <strong>all about</strong> tiles!</div>
 <div>What <strong>data</strong> do we see on this <em>basemap</em>?</div>
 <div data-bodyclass='cupcakebase'></div>
 <div>All of the <strong>data</strong> that makes up this <em>basemap</em> is from <a href="https://osm.org">OpenStreetMap</a>!</div>
@@ -420,8 +445,7 @@
 <div data-bodyclass='craigslist'></div>
 <div>This map is <em>also</em> made of <strong>OSM</strong> data!</div>
 <div>Cartographic decisions have been made about what <em>data</em> to <em>render (show)</em> <strong>how</strong> on these basemaps.</div>
-<div data-bodyclass='quote'>"The term <em>basemap</em> is seen often in GIS and refers to a collection of GIS data and/or orthorectified imagery that form the <strong>background setting</strong> for a map.  The function of the basemap is to <em>provide background detail</em> necessary to <strong>orient the location</strong> of the map." - Caitlin Dempsey Morais on <a href="https://www.gislounge.com/basemaps-defined/">GIS Lounge</a></div>
-<div>A more <strong>flattering</strong> definition than we've allowed so far.</div>
+<div data-bodyclass='quote'>"The term <em>basemap</em> is seen often in GIS and refers to a collection of GIS data and/or orthorectified imagery that form the <strong>background setting</strong> for a map. The function of the basemap is to <em>provide background detail</em> necessary to <strong>orient the location</strong> of the map." - Caitlin Dempsey Morais on <a href="https://www.gislounge.com/basemaps-defined/">GIS Lounge</a></div>
 <div>In <strong>truth</strong>, basemaps have come <em>a long way</em>.</div>
 <div data-bodyclass='basemap1'></div>
 <div data-bodyclass='basemap2'></div>
@@ -444,7 +468,7 @@
 <div>The <strong>three mandatory</strong> files are the <em>dbf</em>, the <em>shp</em>, and the <em>shx</em>.</div>
 <div>The <em>dbf</em> contains the <strong>attribute</strong> information for the dataset with <strong>different values</strong> for each feature.</div>
 <div>The <em>prj</em> contains the <strong>projection</strong> information for the dataset.</div>
-<div><strong>Don't worry</strong>, we <em>won't</em> talk about projections today. :-P</div>
+<div><strong>Don't worry</strong>, we <em>won't</em> talk about projections today. <strong>:-P</strong></div>
 <div>The <em>shx</em> file is an <strong>index</strong> file that is <em>necessary</em> for shapefiles to work.</div>
 <div>The <strong>shp</strong> file contains the dataset's <em>geometry</em> information. (Points, lines, polygons, etc).</div>
 <div><em>Shapefiles</em> can be used with most <strong>desktop GIS</strong> and <strong>spatial analysis</strong> tools.</div>
@@ -477,27 +501,25 @@
 <div><em>Okay.</em> We're ready for our <strong>third exercise</strong>!</div>
 <div>This exercise will be about making <em>thematic maps</em>.</div>
 <div data-bodyclass='quote'>"<strong>Thematic maps</strong> are data maps of a <em>specific subject</em> or for a <em>specific purpose</em>. Statistical thematic maps include a variety of different <strong>map types</strong> such as choropleth or shaded maps, dot maps, proportional symbol maps, and isarithmic maps." - <a href="https://www.census.gov/geo/maps-data/maps/thematic.html">U.S. Census Bureau</a></div>
-<div>So now let's create a <em>free</em> CartoDB account for yourself at <a href='https://cartodb.com/signup'>cartodb.com /signup</a>.</div>
+<div>So now let's create a <em>free</em> CartoDB account at <a href='https://cartodb.com/signup'>cartodb.com /signup</a>.</div>
 <div>And check out the <a href="https://cartodb.com/gallery/">gallery</a> of other stuff people have done with <em>CartoDB</em></div>
-<div><em>Exercise 3:</em> Make a <em>web map</em> of <strong>Community Gardens</strong> using <a href='http://cartodb.com'>CartoDB</a>.</div>
-<div>Download some data on the <a href="https://data.sfgov.org/Economy-and-Community/Community-Gardens-San-Francisco-CA/tkhq-qkum">locations of Community Gardens in San Francisco</a>.</div>
-<div>Note where you downloaded <strong>SanFranciscoCommunityGardens.zip</strong>.</div>
-<div data-bodyclass='upload'></div>
-<div data-bodyclass='table'></div>
-<div>Note the <em>graceful</em> options you have for <strong>georeferencing</strong>.</div>
-<div data-bodyclass='georeference'></div>
-<div>Once you've <em>loaded the data</em>, click <strong>Map View</strong> in the upper left corner to see the community garden <em>points on a map</em> of San Francisco.</div>
+<div><em>Exercise 3:</em> Make a <em>web map</em> of <strong>recent earthquakes</strong> using <a href='http://cartodb.com'>CartoDB</a>.</div>
+<div>Open a <em>new tab</em> and head to <a href='http://bit.ly/earthquakes-45'>bit.ly /earthquakes-45</a>.</div>
+<div data-bodyclass='earthquakes-45'>You should see a page that looks like this.</div>
+<div>Back on <strong>CartoDB</strong>, click <em>MAPS</em> in the top right, then click the <strong>green</strong> button that says <em>NEW MAP</em>.</div>
+<div data-bodyclass='cdb-new-map'></div>
+<div>On the <strong>new map</strong> page, <em>copy</em> and <em>paste</em> the <strong>GeoJSON URL</strong> from the <em>other tab</em> into the <strong>URL box</strong>.</div>
+<div data-bodyclass='cdb-url'></div>
+<div>Click <em>submit</em> and then <strong>CONNECT DATASET</strong>.</div>
+<div data-bodyclass='cdb-earthquakes'>BOOM!</div>
 <div>Let's change the <strong>basemap</strong> to the one from the <em>Mapbox exercise</em>. Click the <strong>Basemap</strong> button at top left.</div>
 <div data-bodyclass='basemap-cartodb'><br><br><br>Put in the <em>Map ID</em> from your map. Let's go with <strong>mapbox.outdoors</strong>. Also add your <em>access token</em>.</div>
 <div><strong>Ack!</strong> I <em>tricked</em> you into making a <strong>hideous</strong> mashup! Ha ha!</div>
 <div>(That is what <em>happens</em> when you take a <em>reference</em> map and slap some data on it <strong>;)</strong> )</div>
-<div>With your <strong>new basemap</strong> you may need to <em>change the styling</em> of the community gardens. In the <strong>right column</strong>, click <em>wizards</em>.</div>
+<div>With your <strong>new basemap</strong> you may need to <em>change the styling</em> of the earthquakes. In the <strong>right column</strong>, click <em>wizards</em>.</div>
 <div>Customize away! And don't forget to <strong>SAVE</strong>!</div>
-<div>Next, customize the <strong>info windows</strong> by clicking <em>infowindow</em> in the <strong>right column</strong>.</div>
-<div data-bodyclass='info'></div>
-<div data-bodyclass='infowindow'></div>
 <div>Want to <strong>keep going?</strong> Check out the <a href="https://docs.cartodb.com/tutorials.html">tutorials</a>.</div>
-<div>When you're done, <strong>save</strong> your map..</div>
+<div>When you're done, <strong>save</strong> your map.</div>
 <div><strong>That's it for this week!</strong></div>
 <div>If you have some time in the next week, use <em>one of the techniques</em> we used today to make <strong>your own map</strong>.</div>
 <div><em>Thanks!</em></div>
