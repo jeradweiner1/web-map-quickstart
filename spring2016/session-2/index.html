@@ -349,8 +349,9 @@
 <div>You can definitely do <em>more</em> with code, but it's <strong>important</strong> to see what you can do <em>without</em> it.</div>
 <div>We will also do <em>three exercises</em>.</div>
 <div>In <strong>Exercise 1</strong> we will play with static maps from the <em>Google Maps API</em> in the browser.</div>
-<div>In <strong>Exercise 2</strong> we will <em>draw markers</em> on a custom <a href="https://mapbox.com">Mapbox</a> basemap.</div>
+<div>In <strong>Exercise 2</strong> we will <em>compare</em> the <a href="https://mapbox.com">Mapbox</a> static API.</div>
 <div>In <strong>Exercise 3</strong> we will <em>get fancy</em> with <a href="https://cartodb.com">CartoDB</a>.</div>
+<div>If we we have time and the lab computers are willing, we'll also take a look at some <strong>GL</strong> functionality and styling examples with Mapbox Studio</div>
 <div><strong>Before</strong> we start our <em>first exercise</em>, let's <strong>recap</strong>.</div>
 <div><em>Web mapping platforms</em> take away some ability to <strong>customize</strong>, but they are <strong>great</strong> for making <em>quick and dirty</em> web maps.</div>
 <div>Other benefits include: your <strong>browser</strong> is your <em>principal tool</em>.</div>
@@ -396,6 +397,7 @@
 <div><code style='color:gray;'>color:blue</code> defines the <strong>color</strong> of the marker.</div>
 <div><code style='color:gray;'>label:S</code> defines the <strong>label</strong> of the marker.</div>
 <div><code style='color:gray;'>40.702147,-74.015794</code> defines the <strong>location</strong> of the marker.</div>
+<div>Now that we know more about markers, how would you <strong>change</strong> the URL for our SF map?</div>
 <div><em>Try</em> adding your <em>own marker</em> somewhere in <strong>San Francisco</strong>.</div>
 <div>You can <strong>read more</strong> about the <em>Google Maps Static API</em> <a href='https://developers.google.com/maps/documentation/staticmaps/#quick_example'>here</a>.</div>
 <div>After we take a break, let's <strong>compare</strong> this with the <em>Mapbox Static API</em>.</div>
@@ -474,7 +476,7 @@
 <div><em>Shapefiles</em> can be used with most <strong>desktop GIS</strong> and <strong>spatial analysis</strong> tools.</div>
 <div><em>Shapefiles</em> are <strong>not</strong> used in web maps.</div>
 <div><strong>However</strong>, as we'll see in the <em>exercise</em>, there are <strong>many</strong> web-mapping tools that can <em>convert</em> shapefiles to web-friendly formats.</div>
-
+<div>What if you just have a list of addresses?</div>
 <div>Geocoding</div>
 <div data-bodyclass='quote'>"Geocoding is the process of <strong>enriching a description</strong> of a location, most typically a postal address or place name, with <em>geographic coordinates</em> from spatial reference data such as building polygons, land parcels, street addresses, ZIP codes (postal codes) and so on." - <a href='https://en.wikipedia.org/wiki/Geocoding'>Wikipedia</a></div>
 <div>Geocoding is <strong>HARD</strong>.</div>
@@ -513,7 +515,7 @@
 <div>Click <em>submit</em> and then <strong>CONNECT DATASET</strong>.</div>
 <div data-bodyclass='cdb-earthquakes'>BOOM!</div>
 <div>Let's change the <strong>basemap</strong> to one from <em>Mapbox</em>. Click the <strong>Change basemap</strong> button at bottom left, click the <strong>+</strong> button, then go to the <strong>Mapbox </strong>tab.</div>
-<div data-bodyclass='basemap-cartodb'><br><br><br>Put in the <em>Map ID</em> from your map. Let's go with <strong>mapbox.outdoors</strong>. Also add your <em>access token</em>.</div>
+<div data-bodyclass='basemap-cartodb'><br><br><br>Remember <em>Map IDs</em> from the Mapbox exercise? Let's go with <strong>mapbox.outdoors</strong>. Also add your <em>access token</em>.</div>
 <div><strong>Ack!</strong> I <em>tricked</em> you into making a <strong>hideous</strong> mashup! Ha ha!</div>
 <div>(That is what <em>happens</em> when you take a <em>reference</em> map and slap some data on it <strong>;)</strong> )</div>
 <div>With your <strong>new basemap</strong> you may need to <em>change the styling</em> of the earthquakes. In the <strong>right column</strong>, click <em>wizards</em>.</div>
