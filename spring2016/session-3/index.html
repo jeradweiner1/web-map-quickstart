@@ -245,6 +245,15 @@
     background-repeat: no-repeat;
     background-size: 100;
   }
+  .map-intent {
+    background-image: url(./images/intent.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .map-selection {
+    background-image: url(./images/selection.gif);
+    background-repeat: no-repeat;
+  }
 </style>
 <script src='../../big.js'></script>
 </head><body>
@@ -252,6 +261,7 @@
 <div>Web Mapping <em>Quick Start</em> <strong>Session 3</strong>!</div>
 <div><em>Today</em> we are going to start by talking about <strong>cartography</strong>.</div>
 <div>(This is where I <strong>try really hard</strong> to talk about <em>map design</em> and mostly just <strong>quote other people</strong> who are <em>really awesome</em> at this.)</div>
+<div>After cartography, we'll talk about making a web map from scratch.</div>
 <div>There are <strong>lots</strong> of <em>different</em> kinds of maps, but they <em>mainly</em> fall into <strong>two</strong> categories:</div>
 <div><em>Reference</em> maps and <strong>thematic</strong> maps.</div>
 <div><em>Reference</em> maps focus on <strong>where things are</strong>.</div>
@@ -266,12 +276,13 @@
 <div data-bodyclass='uo-campus'></div>
 <div>(For the rest of the class, let's lump <em>special-purpose</em> in with <em>reference</em>.)</div>
 <div>The <em>following</em> comes from <a href='http://makingmaps.owu.edu/'>Making Maps: A Visual Guide to Map Design for GIS</a> by John Krygier and Denis Wood.</div>
-<div>This was a <strong>textbook</strong> for my <em>Advanced Cartography</em> class in school!</div>
+<div>This is a popular <strong>textbook</strong> for <em>cartography</em> classes!</div>
 <div><strong>Before</strong> you start making your map, ask yourself: <em>Why are you making your map?</em></div>
 <div data-bodyclass='quote'>"Prior to making a map, clarify your intent. Simply writing out the purpose of the map prior to making it will clarify goals; help determine relevant data, map design, and symbolization choices; and will lead to a better map."</div>
 <div>An <strong>example</strong> of intent (also from Krygier and Wood):</div>
 <div>A map showing a proposed Black Heritage Trail in Eli County, VA. The map is the visual centerpiece for a proposal for grants to develop the trail ad its associated sites, and must visually tantalize granting agencies.</div>
 <div>Note that the <em>intent</em> includes both what you want to <strong>show</strong> as well as the <em>story</em> you want to tell.</div>
+<div data-bodyclass='map-intent'></div>
 <div>Think about a <strong>map</strong> you would like to make and write down the <em>intent</em>. We'll come back to these later.</div>
 <div>The <strong>intent</strong> of the map helps us to consider <em>other</em> parts of the map.</div>
 <div>For example: <em>data</em>!</div>
@@ -298,7 +309,9 @@
 <div>This is made <strong>more complicated</strong> by <em>interaction</em> and <strong>zooming</strong> in maps.</div>
 <div><em>Map generalization</em> and <em>classification</em> includes:<br><ul><li>selecting</li><li>simplifying</li><li>smoothing</li><li>displacing</li><li>enhancing</li></ul></div>
 <div><em>selection</em>: what data do you show at each zoom level?</div>
+<div data-bodyclass='map-selection'></div>
 <div><strong>simplification</strong> and <strong>smoothing</strong>: how can you generalize complex lines?</div>
+<div><a href="http://www.naturalearthdata.com/downloads/">Natural Earth</a></div>
 <div><a href='http://www.lmrcc.org/wp-content/uploads/2013/06/LMRRA_Study_Area.pdf'>displacement</a>: what do you have to move so it can be seen?</div>
 <div><strong>enhancement</strong>: what do you have to make bigger so it can be seen?</div>
 <div>Consider the <strong>theme</strong> of your map and your data. Might you need to employ any of <em>these techniques</em> in your map?</div>
@@ -313,8 +326,6 @@
 <div><strong>How</strong> do you avoid making an <em>ugly</em> or <strong>confusing</strong> map?</div>
 <div>Guess what?</div>
 <div>It's <em>really</em>, <strong>really</strong> hard.</div>
-<div>There is <strong>lots</strong> of good writing on maps online -- I will update this slide deck to include links.</div>
-<div>But I do have some <em>awesome books</em> you can check out during the <strong>break</strong>!</div>
 <div>A fun exercise: do a search for <em>"cool maps"</em> or <em>"buzzfeed maps"</em> or <em>"40 maps"</em> and pick out the <strong>design flaws</strong> in each of them.</div>
 <div>BREAK</div>
 
@@ -340,9 +351,9 @@
 <div>We can't add <strong>JavaScript</strong> to a web page without adding <em>HTML</em>, because then there would be <strong>nothing</strong> for us to work with!</div>
 <div><strong>Every</strong> website is made up of these three things, whether it has a <em>map</em> or <strong>images</strong> or <em>input boxes</em> or <strong>forms</strong> or...</div>
 <div>Open up <em>Chrome</em> and head to <a href='http://lyzidiamond.com'>lyzidiamond.com</a></div>
-<div><strong>Right click</strong> on the picture of me and click <em>Inspect Element</em>.</div>
+<div><strong>Right click</strong> on the picture and click <em>Inspect Element</em>.</div>
 <div data-bodyclass='devtools'></div>
-<div>These is the <strong>Chrome Developer Tools</strong>. They are <em>super</em> helpful.</div>
+<div>These are the <strong>Chrome Developer Tools</strong>. They are <em>super</em> helpful.</div>
 <div>Let's start by looking at <strong>Elements</strong>.</div>
 <div data-bodyclass='devgif'></div>
 <div>Click over to <strong>Network</strong> and then <em>reload</em> the page.</div>
@@ -352,17 +363,20 @@
 <div>The <strong>Console</strong> is a <em>JavaScript environment</em>. You can put <code><pre>console.log()</pre></code> in your code to print to the Console.</div>
 <div>You can <em>also</em> use it to <strong>play around with JavaScript</strong>!</div>
 <div>In the <strong>Console</strong>, type <code>x = 4</code>.</div>
-<div>Now just type <code>x</code>. Did the console print <code>4</code> back at you?</div>
+<div>Now just type <code>x</code>.</div>
+<div>Did the console print <code>4</code> back at you?</div>
 <div><strong>Awesome!</strong> Now <code>x</code> is synonymous with <code>4</code>.</div>
 <div>Try <code>x + 4</code>.</div>
-<div>Did the console print <code>8</code>?</div>
+<div>What did the console print?</div>
 <div>This is a <strong>great</strong> way to try out some JavaScript.</div>
 <div>Let's make a <em>variable</em> called <code>name</code> and have it store our names.</div>
 <div><code>name = "Lyzi"</code></div>
 <div><code>name</code> should print out <code>"Lyzi"</code></div>
-<div>To print out the number of letters in your name, type <code>name.length</code>.</div>
-<div><code>name</code> is a <strong>string</strong> so <code>length</code> returns the number of <em>characters</em> in the string.</div>
-<div><code>typeof(name)</code> should return <code>string</code></div>
+<div>Our <code>name</code> variable is a <strong>string</strong>, which is a type of data in JavaScrit.</div> 
+<div>Type in <code>typeof(name)</code> and hit enter. The console should return <code>string</code></div>
+<div>When we create a <strong>string</strong>, it is automatically given some properties.</div>
+<div>Type <code>name.length</code> and hit enter. What happens?</div>
+<div>Neat!</div>
 <div>Head to <a href='http://lyzidiamond.com/leaflet.html'>lyzidiamond.com/leaflet.html</a> and open up the <em>Console</em> (right click, <strong>Inspect Element</strong>).</div>
 <div>Now right-click anywhere on the page and click <em>View Page Source</em>. The <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong> that make up the page should open in a new tab.</div>
 <div>Let's talk through this <em>line by line</em> and talk about what's happening.</div>
@@ -400,7 +414,7 @@
 <div>Because <em>GeoJSON</em> is basically just <strong>JavaScript</strong>, it can easily be used in <em>web maps</em>!</div>
 <div data-bodyclass='leaflet-gj'>For example, Leaflet loves GeoJSON.</div>
 
-<div>(To learn more about GeoJSON's specificities, check out <a href="http://github.com/lyzidiamond/learn-geojson">Learn GeoJSON</a>. <strong>#shamelessplug</strong>)</div>
+<div>(To learn more about GeoJSON's specificities, check out <a href="http://github.com/lyzidiamond/learn-geojson">Learn GeoJSON</a>.)</div>
 <div data-bodyclass='geojson'></div>
 <div><strong>Note:</strong> GeoJSON files can have one of <strong>three</strong> different file extensions: <em>.geojson</em>, <em>.json</em>, and <em>.js</em>.</div>
 <div>Let's play with some <strong>existing</strong> GeoJSON, then make our <em>own</em> GeoJSON.</div>
@@ -443,7 +457,6 @@
 
 <div>Dudes. You <em>wrote some JavaScript</em> and <strong>made a map</strong>. That is <em>so awesome</em>.</div>
 <div>This is where we'll <strong>stop</strong> for now. Next week we'll explore some other cool ways <em>maps</em> are being used on the <em>web</em>.</div>
-<div>There may be <strong>guest speakers</strong>!</div>
 <div>Next week I will <strong>also</strong> show you how to get your maps <em>up on the web</em> so you can <strong>share them</strong>.</div>
 <div data-bodyclass='cactus'></div>
 <div>Thanks!</div>
