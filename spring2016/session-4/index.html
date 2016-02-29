@@ -96,6 +96,30 @@
     color: white;
     text-shadow: 0px 0px 50px #000;
   }
+  .charts {
+    background-image: url('images/charts.png');
+    background-repeat: no-repeat;
+    background-position: center 40px;
+    background-size: 70%;
+    color: white;
+    text-shadow: 0px 0px 50px #000;
+  }
+  .projections {
+    background-image: url('images/projections.png');
+    background-repeat: no-repeat;
+    background-position: center 40px;
+    background-size: 100%;
+    color: white;
+    text-shadow: 0px 0px 50px #000;
+  }
+  .dive-in {
+    background-image: url('images/dive-in.gif');
+    background-repeat: no-repeat;
+    background-position: center 40px;
+    background-size: 100%;
+    color: white;
+    text-shadow: 0px 0px 50px #000;
+  }
   .bye {
     background-image: url('images/bye.gif');
     background-repeat: no-repeat;
@@ -106,8 +130,9 @@
 </style>
 <script src='big.js'></script>
 </head><body>
-
-<div><em>Github + Maptime</em><br></div>
+<div>CCSFGIS Web Map Quick Start <br><em>Session 4</em></div>
+<div><ul><li><em>GitHub & GitHub Pages</em></li><li><strong>Data viz with D3</strong></li></ul></div>
+<div><em>Github</em></div>
 <div>Borrowed from <a href='http://twitter.com/mappingmashups'>Alan</a> and <a href='http://twitter.com/fulgenteft'>Camille</a> of Maptime fame.
 </div>
 
@@ -146,7 +171,7 @@
   * <a href='https://github.com/hackbrightacademy/Hackbright-Curriculum/tree/master/GitOperations' target='_blank'>Hackbright Git exercise</a>
 </div>
 
-<div>ADD YOUR NAME! we'll walk you through it</div>
+<div><a href="https://github.com/ccsfgis-dan/web-map-quickstart/blob/gh-pages/spring2016/session-4/pull-request-map/js/names.js">ADD YOUR NAME</a>! We'll walk through it together.</div>
 <div><a href='http://nodeschool.io/#git-it' target='_blank'>nodeschool's git-it</a></div>
 <div>success!</div>
 <div>GitHub Pages!</div>
@@ -168,22 +193,24 @@
 <div>Another way you can embed a map in a page is with an <em>iFrame</em>.</div>
 <div>An <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">iFrame</a> is a <strong>website within a website</strong>.</div>
 <div>A lot of web mapping <em>platforms</em> offer <strong>pre-made</strong> iFrame code for you. Let's try embedding a <em>CartoDB</em> map with an iFrame</div>
-<div>Grab the code from <a href="https://github.com/danswick/web-map-quickstart/blob/gh-pages/spring2016/session-4/intro-to-github/iframe-map.html">this link</a> and try putting it on the Internet.</div>
+<div>Grab the code from <a href="https://github.com/danswick/web-map-quickstart/blob/gh-pages/spring2016/session-4/intro-to-github/iframe-map.html">this link</a>, <em>swap in your own iFrame</em>, and try putting it on the Internet.</div>
 <div><em>hint #1: </em>try adapting the process we used to put our Leaflet map online.</div>
 <div><em>hint #2: </em>CartoDB provides handy iFrame code for you.</div>
 <div data-bodyclass="cartodb-iframe"></div>
 <div data-bodyclass="champion">You are a champion!</div>
 <div>Let's take a <em>break</em>. When we come back we're going to talk data visualization with D3.</div>
-<div>Lots of you sent me sweet dataviz <a href="https://docs.google.com/document/d/1QsOuFm01wwRUHO0BJrPXVkhna07BOCORWVE8XpHw0gg/edit">examples</a> after session 1.</div>
-<div>Many of these <a href="http://climate.audubon.org/geographical-search">examples</a> are built with D3.</div>
+<div>Lots of you sent me sweet dataviz <a href="https://docs.google.com/document/d/1QsOuFm01wwRUHO0BJrPXVkhna07BOCORWVE8XpHw0gg/edit">examples</a> after session 1, <a href="http://climate.audubon.org/geographical-search">many of which</a> were built with D3.</div>
+<div>Before we break out the <code>code</code>, why might you use D3?</div>
+<div data-bodyclass="charts">Non-map visualizations!</div>
+<div data-bodyclass="projections">Projections!</div>
+<div>And so on... <br>D3 is <strong>super powerful</strong>.</div>
+<div data-bodyclass="dive-in">Let's dive in!</div>
 <div>We're going to switch gears a bit and borrow from <a href="http://maptimeboston.github.io/">Maptime Boston</a>'s excellent D3 tutorial.</div>
 <div>Head to this link to follow along --> <a href="http://maptimeboston.github.io/d3-maptime/">http://maptimeboston.github.io/d3-maptime</a></div>
 <div>Thanks a ton for being a great class!</div>
-<div>Feel free to reach out via <a href="mailto:dan.swick@gmail.com">email</a> or <a href="http://www.twitter.com/danswick">Twitter</a> at any time if you have questions or just want to <strong>geek out about maps</strong></strong>.</div>
+<div>Feel free to reach out via <a href="mailto:dan.swick@gmail.com">email</a> or <a href="http://www.twitter.com/danswick">Twitter</a> at any time if you have questions or just want to <strong>geek out about maps</strong>.</div>
 <div data-bodyclass="bye"></div>
 <div>Don't forget to take today's <a href="https://docs.google.com/a/mapbox.com/forms/d/1k0WRvuGKYcloysXPO_y9_XZUnNZHtQe0To6AyU5kxIA/viewform">exit survey</a>.</div>
-
-
 
 </body>
 </html>
